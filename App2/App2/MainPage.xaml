@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2"
+             x:Class="App2.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Register" Activated="ToolbarItem_Activated">
+                    </ToolbarItem>
+        <ToolbarItem Text="Login" Activated="ToolbarItem_Activated_1">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout BackgroundColor="#fc9c70" Margin="10" Padding="15">
+        <!-- Place new controls here -->
+        
+       <Label Text="WELCOME"
+              FontSize="Large"
+              TextColor="Black"
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              />
+        <Image x:Name="imgDisp" Margin="10"  
+             />
+
+        <Label Text="Copyright 2020"
+               HorizontalOptions="EndAndExpand"></Label>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

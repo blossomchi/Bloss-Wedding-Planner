@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.FoodPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#fc9c70" Margin="10" Padding="15">
+            <Label Text="Food And Drinks Arrangement!"
+                FontSize="Large"
+                TextColor="Black"
+                   TextDecorations="Underline"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label Text="Click the image pounded yam to save."></Label>
+            <ScrollView>
+                <ImageButton x:Name="Img1" Clicked="Img1_Clicked"></ImageButton>
+            </ScrollView>
+            <Label></Label>
+            <Label Text="Click the image Joll of rice to save."></Label>
+            <ScrollView>
+                <ImageButton x:Name="Img2" Clicked="Img2_Clicked"></ImageButton>
+            </ScrollView>
+            <Label></Label>
+            <Label Text="Click the image Africa salad to save."></Label>
+            <ScrollView>
+                <ImageButton x:Name="Img3" Clicked="Img3_Clicked"></ImageButton>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

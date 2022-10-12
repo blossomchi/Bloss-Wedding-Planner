@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.ContinentalPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#fc9c70" Margin="10" Padding="15">
+            <Label x:Name="CouplesName"
+                FontSize="Large"
+                TextColor="Black"
+                TextDecorations="Underline"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Image x:Name="SlideImage"></Image>
+            <ScrollView>
+                <ListView x:Name="ListViewInfo" ItemsSource="{Binding cateringServices}" BackgroundColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                                <StackLayout BackgroundColor="#eee" Orientation="Vertical" Padding="7">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding CateringName}" TextColor="#f35e20" />
+                                        <Label Text="{Binding CateringContact}" HorizontalOptions="EndAndExpand"
+                                            TextColor="#503026" />
+                                        <ImageButton x:Name="Display" Clicked="Display_Clicked" Source="click.png"></ImageButton>
+                                        </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </ScrollView>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

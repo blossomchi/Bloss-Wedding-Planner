@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.CollectionPage">
+    <ContentPage.Content>
+        <Grid>
+        <ScrollView HorizontalOptions="StartAndExpand">
+                <ScrollView.VerticalOptions>
+                    <OnIdiom
+                        x:TypeArguments="LayoutOptions"
+                        Default="CenterAndExpand"
+                        Phone="FillAndExpand" />
+                </ScrollView.VerticalOptions>
+
+                <StackLayout 
+                    Spacing="0"
+                    VerticalOptions="CenterAndExpand" 
+                    Padding="15">
+
+                    <Grid RowSpacing="0" VerticalOptions="StartAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                   </Grid.RowDefinitions>
+
+              <Label 
+                x:Name="CollectionName"
+                Margin="0,8"
+                FontSize="20"
+                TextColor="Black"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                LineHeight="1.5"/>
+
+             <Frame 
+                 Grid.Row="1" 
+                 Margin="0,8">
+                <Label Text="Copuples Information and Wedding Date" TextColor="Black" FontSize="Medium"></Label>
+            </Frame>
+                    
+            <ListView
+                x:Name="BrideInfo" 
+                ItemsSource="{Binding data}"
+                Grid.Row="2"
+                Margin="0,8">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#eee" Orientation="Horizontal">
+                                <Label Text="Wedding Date is on ---" TextColor="#f35e20"></Label>
+                                <Label Text="{Binding WeddingDate}" TextColor="#503026" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Frame 
+                Grid.Row="3"
+                Margin="0,8">
+                <Label Text="Venue and Seat Information" FontSize="Medium" TextColor="Black"></Label>
+            </Frame>
+
+            <ListView 
+                x:Name="SeatsInfo" 
+                ItemsSource="{Binding SeatInfo}"
+                Grid.Row="4"
+                Margin="0,8">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout BackgroundColor="#eee" Orientation="Horizontal">
+                                        <Label Text="{Binding VenueName}" TextColor="#f35e20"/>
+                                        <Label Text="{Binding VenuelocationName}" TextColor="#f35e20"/>
+                                        <Label Text="{Binding ContactName}" TextColor="#503026" />
+                                        <Label Text="{Binding CostName}" TextColor="#503026"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </Grid>
+           </StackLayout>
+        </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

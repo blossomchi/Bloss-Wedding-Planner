@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.NextInfoPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#fc9c70" Margin="10" Padding="15">
+            <Label Text="Welcome, Bride And Groom Information!"
+                 FontSize="Large"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Entry x:Name="BrideNameEntry" Placeholder="Bride First Name"></Entry>
+            <Entry x:Name="BrideGenderEntry" Placeholder="Bride Gender"></Entry>
+            <Entry x:Name="GroomNameEntry" Placeholder="Groom First Name"></Entry>
+            <Entry x:Name="GroomGenderEntry" Placeholder="Groom Gender"></Entry>
+            <Label Text="Select Wedding Date."></Label>
+            <DatePicker x:Name="WeddDateEntry"></DatePicker>
+            <Button Text="Save Information" x:Name="SaveBride" Clicked="SaveBride_Clicked"></Button>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

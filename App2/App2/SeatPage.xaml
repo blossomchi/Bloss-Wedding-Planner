@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.SeatPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#fc9c70" Margin="10" Padding="15">
+            <Label Text="Venue And Seat Arrangement!"
+                FontSize="Large"
+                TextColor="Black"
+                TextDecorations="Underline"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label></Label>
+                <Label Text="Wellington Main Hall." TextColor="Black"></Label>
+                <Label Text="Location: Warri Delta State." TextColor="Black"></Label>
+                <Label Text="Contact: xxxxxxxx." TextColor="Black"></Label>
+                <Label Text="Cost: ₦360,000." TextColor="Black"></Label>
+                <Label Text="Click on the image to save." TextColor="Black"></Label>
+            <ScrollView>
+                <ImageButton x:Name="Img1" Clicked="Img1_Clicked"></ImageButton>
+            </ScrollView>
+            <Label></Label>
+            <Label Text="Shereton Hall2." TextColor="Black"></Label>
+            <Label Text="Location: Abuja." TextColor="Black"></Label>
+            <Label Text="Contact: xxxxxxxx." TextColor="Black"></Label>
+                <Label Text="Cost: ₦260,000." TextColor="Black"></Label>
+                <Label Text="Click on the image to save."></Label>
+            <ScrollView>
+                <ImageButton x:Name="Img2" Clicked="Img2_Clicked"></ImageButton>
+            </ScrollView>
+            <Label></Label>
+
+                <Label Text="Chida International Hotel" TextColor="Black"></Label>
+                <Label Text="Location: Abuja." TextColor="Black"></Label>
+                <Label Text="Contact: xxxxxxxx." TextColor="Black"></Label>
+                <Label Text="Cost: ₦250, 000" TextColor="Black"></Label>
+                <Label Text="Click on the image to save."></Label>
+                <ScrollView>
+                    <ImageButton x:Name="Img3" Clicked="Img3_Clicked"></ImageButton>
+                </ScrollView>
+                <Label></Label>
+                <Label Text="Spring Place Event Centre" TextColor="Black"></Label>
+                <Label Text="Location: Port Harcourt." TextColor="Black"></Label>
+                <Label Text="Contact: xxxxxxxx." TextColor="Black"></Label>
+                <Label Text="Cost: ₦300,000 to ₦1,000,000." TextColor="Black"></Label>
+                <Label Text="Click on the image to save."></Label>
+                <ScrollView>
+                    <ImageButton x:Name="Img4" Clicked="Img4_Clicked"></ImageButton>
+                </ScrollView>
+
+                <Label></Label>
+                <Label Text="Palazzo Dumont" TextColor="Black"></Label>
+                <Label Text="Location: Lagos." TextColor="Black"></Label>
+                <Label Text="Contact: xxxxxxxx." TextColor="Black"></Label>
+                <Label Text="Cost:  ₦250,000" TextColor="Black"></Label>
+                <Label Text="Click on the image to save."></Label>
+                <ScrollView>
+                    <ImageButton x:Name="Img5" Clicked="Img5_Clicked"></ImageButton>
+                </ScrollView>
+
+                <Label></Label>
+                <Label Text="Etal Hotels and Halls" TextColor="Black"></Label>
+                <Label Text="Location: Lagos." TextColor="Black"></Label>
+                <Label Text="Contact: xxxxxxxx." TextColor="Black"></Label>
+                <Label Text="Cost: ₦450, 000" TextColor="Black"></Label>
+                <Label Text="Click on the image to save."></Label>
+                <ScrollView>
+                    <ImageButton x:Name="Img6" Clicked="Img6_Clicked"></ImageButton>
+                </ScrollView>
+
+                <Label></Label>
+                <Label Text="Panda Event Centre (Platinum/Middle Hall)" TextColor="Black"></Label>
+                <Label Text="Location: Lagos." TextColor="Black"></Label>
+                <Label Text="Contact: xxxxxxxx." TextColor="Black"></Label>
+                <Label Text="Cost: ₦260,000." TextColor="Black"></Label>
+                <Label Text="Click on the image to save."></Label>
+                <ScrollView>
+                    <ImageButton x:Name="Img7" Clicked="Img7_Clicked"></ImageButton>
+                </ScrollView>
+
+                <Label></Label>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

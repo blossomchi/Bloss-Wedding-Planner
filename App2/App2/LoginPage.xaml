@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.LoginPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#fc9c70" Margin="10" Padding="15">
+             <Label Text="Wedding Planner And Organizer!"
+                FontSize="Large"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   TextColor="Black"/>
+            <Image x:Name="LoginImage"></Image>
+            <Entry x:Name="BrideInfo" Placeholder="Enter Bride Name"></Entry>
+            <Entry x:Name="GroomInfo" Placeholder="Enter Groom Name"></Entry>
+            <Label Text="Select Wedding Date"></Label>
+            <DatePicker x:Name="WedDateEntry"></DatePicker>
+            <Button x:Name="LoginInfo" Text="LOGIN" Clicked="LoginInfo_Clicked"></Button>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

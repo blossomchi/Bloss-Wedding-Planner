@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.DashPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Out" Activated="ToolbarItem_Activated"></ToolbarItem>
+        <ToolbarItem Text="My Collection" Activated="ToolbarItem_Activated_1"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#fc9c70" Margin="10" Padding="15">
+            <Label x:Name="CouplesNameEntry"
+                FontSize="Large"
+                TextColor="Black"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label></Label>
+             <!--List of information on the dashboard-->
+            <Button x:Name="FoodBtn" Text="Food and Drinks." Margin="12" Image="food.jpg" BackgroundColor="White" Clicked="FoodBtn_Clicked"></Button>
+            <Button x:Name="SeatBtn" Text="Venue and Seat." Margin="12" Image="seat.jpg" BackgroundColor="White" Clicked="SeatBtn_Clicked" ></Button>
+            <Button x:Name="BudgetBtn" Text="Budget." Margin="12" Image="Budget.jpg" BackgroundColor="White" Clicked="BudgetBtn_Clicked" ></Button>
+            <Button x:Name="ListBtn" Text="To Do List." IsVisible="False" Image="LIST.png" BackgroundColor="White" Clicked="ListBtn_Clicked" ></Button>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

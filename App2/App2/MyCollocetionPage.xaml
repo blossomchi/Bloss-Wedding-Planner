@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.MyCollocetionPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="White" />
+                                <Setter Property="TextColor" Value="Black" />
+                                <Setter Property="BorderWidth" Value="2" />
+                                <Setter Property="BorderColor" Value="Black" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="White" />
+                                <Setter Property="TextColor" Value="Black" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid ColumnSpacing="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <BoxView BackgroundColor="#fc9c70" Grid.Row="0" Grid.ColumnSpan="2" />
+        <Label 
+            x:Name="CollectionName" 
+            TextColor="Black" 
+            Margin="0,8"
+            HorizontalOptions="Center" 
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            FontSize="40" 
+            Grid.ColumnSpan="2" 
+            VerticalOptions="Center" />
+
+        <Button 
+            x:Name="WedInfo" 
+            Grid.Column="0" 
+            Grid.Row="1" 
+            Margin="0,8"
+            Text="Wedding Date"
+            Clicked="WedInfo_Clicked"
+            />
+        
+        
+        <Button 
+            x:Name="VenueInfo" 
+            Grid.Column="1" 
+            Grid.Row="1"
+            Margin="0,8"
+            Text="Venue Information"
+            Clicked="VenueInfo_Clicked"
+             />
+
+
+        <ListView
+                x:Name="BrideInfo" 
+                ItemsSource="{Binding data}"
+                Grid.Row="2" Grid.ColumnSpan="2"
+                Margin="0,8">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#eee" Orientation="Horizontal">
+                            <Label Text="Wedding Date is on ---" TextColor="#f35e20"></Label>
+                            <Label Text="{Binding WeddingDate}" TextColor="#503026" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+        <ListView 
+                x:Name="SeatsInfo" 
+                ItemsSource="{Binding SeatInfo}"
+               Grid.Row="2" Grid.ColumnSpan="2"
+                Margin="0,8">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#eee" Orientation="Horizontal">
+                            <Label Text="{Binding VenueName}" TextColor="#f35e20"/>
+                            <Label Text="{Binding VenuelocationName}" TextColor="#f35e20"/>
+                            <Label Text="{Binding ContactName}" TextColor="#503026" />
+                            <Label Text="{Binding CostName}" TextColor="#503026"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+
+       
+
+    </Grid>
+</ContentPage>

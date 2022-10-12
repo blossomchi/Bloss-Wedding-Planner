@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.FoodDrinksPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#fc9c70" Margin="10" Padding="15">
+                <Label Text="Food And Drinks Management!"
+                FontSize="Large"
+                TextColor="Black"
+                TextDecorations="Underline"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+                <Label></Label>
+                <Label Text="CLICK ON CONTINENTAL DISH IMAGE" TextColor="Black" HorizontalTextAlignment="Center"></Label>
+                <ImageButton x:Name="Continental" Clicked="Continental_Clicked"></ImageButton>
+                <Label></Label>
+                <Label Text="CLICK ON INTERCONTINENTAL DISH IMAGE" TextColor="Black" HorizontalTextAlignment="Center"></Label>
+                <ImageButton x:Name="Intercontinental" Clicked="Intercontinental_Clicked"></ImageButton>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

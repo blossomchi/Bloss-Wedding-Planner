@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.BudgetPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#fc9c70" Margin="10" Padding="15">
+                <Label Text="Welcome To Budget Estimator!"
+                FontSize="Large"
+                TextColor="Black"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+                <Label></Label>
+                <Entry x:Name="BudgetOveralEntry" Placeholder="Enter The Overall Amount" HorizontalTextAlignment="Center"></Entry>
+                <Entry x:Name="BudgetNameEntry" Placeholder="Enter Budget eg.Reception" HorizontalTextAlignment="Center"></Entry>
+                <Entry x:Name="BudgetEntry" Placeholder="Enter An Amount" HorizontalTextAlignment="Center"></Entry>
+                <Button x:Name="BudgetEnterBtn" Text="Enter Estimate" Clicked="BudgetEnterBtn_Clicked" BorderRadius="6"></Button>
+                <ListView x:Name="BudgetView" ItemsSource="{Binding BugInfo}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="#eee" Orientation="Horizontal">
+                                    <Label Text="{Binding BudgetName}" TextColor="#f35e20"></Label>
+                                    <Label Text="{Binding BudgetAmount}" TextColor="#503026" HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Button x:Name="BudgetBtn" IsVisible="True" Text="Estimate" Clicked="BudgetBtn_Clicked" BorderRadius="6"></Button>
+                <Button x:Name="Reception" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="PhotoVi" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="flower" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="music" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="hotelTra" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="stationary" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="dress" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="gift" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="rings" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="accessories" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="beauty" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+                <Button x:Name="Menswear" IsVisible="False" BackgroundColor="White" BorderRadius="6"></Button>
+            </StackLayout>
+        </ScrollView>        
+    </ContentPage.Content>
+</ContentPage>

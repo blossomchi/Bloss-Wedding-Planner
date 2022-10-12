@@ -1,0 +1,2 @@
+android.app.Application
+Bloss_WedPlanner.Bloss_WedPlanner
